@@ -39,7 +39,7 @@
     _queue = dispatch_queue_create("bbb", DISPATCH_QUEUE_CONCURRENT);
     _group = dispatch_group_create();
     
-//    [self testTimeCostInMultiThreadForSet];
+    [self testTimeCostInMultiThreadForSet];
 //    [self testTimeCostInMultiThreadForGet];
 }
 
@@ -69,7 +69,7 @@
 - (void)testTimeCostInMultiThreadForGet {
     PINCache *cache = [PINCache sharedCache];
     timeStart();
-    for (int i = 0; i<1000; i++) {
+    for (int i = 0; i<1500; i++) {
         enterGroup();
         dispatch_async(_queue, ^{
 //            LOGThreadEveryXXXtimes(1000);
